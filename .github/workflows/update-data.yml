@@ -1,0 +1,45 @@
+name: Daten aktualisieren
+
+on:
+  schedule:
+    - cron: "17 4 * * *"     # täglich ca. 5–6 Uhr deutscher Zeit: Caster + Pegel
+    - cron: "41 */4 * * *"   # alle 4 Stunden: Pegel-Ausweichdaten
+    - cron: "23 3 * * 1"     # montags: Shops aus OpenStreetMap
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", ".github/workflows/update-data.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4
+      - name: Pegel
+        run: python scripts/update_pegel.py
+      - name: Angelpark Caster
+        if: github.event_name != 'schedule' || github.event.schedule == '17 4 * * *'
+        run: python scripts/update_caster.py
+      - name: Angelshops
+        if: github.event_name != 'schedule' || github.event.schedule == '23 3 * * 1'
+        run: python scripts/update_shops.py
+      - name: Speichern
+        run: |
+          git config user.name "barsch-buddy-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "Keine Änderungen"; exit 0; fi
+          git commit -m "Daten aktualisiert $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push

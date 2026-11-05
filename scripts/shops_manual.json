@@ -1,0 +1,6 @@
+[
+  {"name": "Angelsport Bonn", "lat": 50.7368, "lon": 7.1012, "street": "Kesselgasse 3", "postcode": "53111", "city": "Bonn", "phone": "0228 1803333", "website": "https://www.angelsport-bonn.de", "opening_hours": "Mo-Fr 10:00-19:00; Sa 10:00-18:00", "kind": "fishing", "rheinkarte": true},
+  {"name": "Angelsport Gebhard", "lat": 50.7175, "lon": 7.0560, "street": "Villemombler Str. 38", "postcode": "53123", "city": "Bonn", "phone": "", "website": "", "opening_hours": "", "kind": "fishing"},
+  {"name": "Angelsport Steinborn", "lat": 50.9605, "lon": 7.0050, "street": "Wallstraße 78", "postcode": "51063", "city": "Köln", "phone": "0221 629864", "website": "", "opening_hours": "", "kind": "fishing"},
+  {"name": "Angelsport Dellbrück", "lat": 50.9745, "lon": 7.0860, "street": "Bergisch Gladbacher Str. 1000", "postcode": "51069", "city": "Köln", "phone": "0221 9661234", "website": "", "opening_hours": "", "kind": "fishing"}
+]
