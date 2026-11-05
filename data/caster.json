@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T23:51:26+00:00",
+ "updated": "2026-11-05T23:55:30+00:00",
  "curated": {
   "name": "Forellenzucht & Angelpark Caster",
   "address": "Feyermühle, 53894 Mechernich",
@@ -131,7 +131,10 @@
   "closures": []
  },
  "scraped": {
-  "fetched_at": null,
+  "fetched_at": "2026-11-05T23:55:30+00:00",
+  "pages_ok": 4,
+  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "changed_at": null,
   "notes": [],
   "sections": []
  }
