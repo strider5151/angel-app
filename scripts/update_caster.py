@@ -14,7 +14,7 @@ SKIP = re.compile(r"IBAN|BIC|Spendenkonto|PayPal|Kontoinhaber|Empfänger|Cookie|
 NOTE = re.compile(r"geschlossen|gesperrt|Achtung|Hinweis|Betriebsferien|Urlaub|Hochwasser|Flut|Gülle|wieder geöffnet|Eisfrei|Eis\b", re.I)
 UA = {"User-Agent": "Barsch-Buddy-App (privat, taegliche Abfrage)"}
 
-ERRORS, SIZES = [], {}
+ERRORS, SIZES, DEBUG = [], {}, []
 
 def write_status(key, info):
     p = ROOT / "data" / "status.json"
@@ -34,11 +34,19 @@ def clean(t):
 
 def page_sections(html, fallback_title):
     soup = BeautifulSoup(html, "html.parser")
-    for tag in soup(["script", "style", "noscript", "nav", "header", "footer", "form", "iframe"]):
+    for tag in soup(["script", "style", "noscript", "iframe"]):
         tag.decompose()
-    body = soup.find("main") or soup.find(id=re.compile("content|main", re.I)) or soup.body or soup
+    # Inhaltsbereich wählen: das Kandidaten-Element mit dem meisten Text (Navigation/Fußzeile werden über SKIP gefiltert)
+    whole = soup.body or soup
+    cands = [soup.find("main"), soup.find(id=re.compile("content|inhalt|main", re.I)), soup.find(class_=re.compile("content|inhalt", re.I))]
+    cands = [c for c in cands if c is not None and len(c.get_text(strip=True)) > 200]
+    body = max(cands, key=lambda c: len(c.get_text(strip=True))) if cands else whole
+    for tag in body.find_all(["nav", "footer"]):
+        tag.decompose()
+    DEBUG.append({"title": fallback_title, "text_len": len(whole.get_text(strip=True)), "body_tag": body.name, "body_id": body.get("id"), "sample": clean(whole.get_text(" "))[:600],
+                  "html_head": re.sub(r"\s+", " ", html[:200]), "tags": {t: len(whole.find_all(t)) for t in ["p", "div", "table", "h1", "h2", "h3", "br", "span", "font", "td"]}})
     sections, cur, tables = [], {"title": fallback_title, "lines": []}, []
-    for el in body.find_all(["h1", "h2", "h3", "h4", "p", "li", "table"]):
+    for el in body.find_all(["h1", "h2", "h3", "h4", "h5", "p", "li", "table"]):
         if el.find_parent("table") and el.name != "table":
             continue
         if el.name == "table":
@@ -163,7 +171,7 @@ def main():
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     write_status("caster", {"pages_ok": ok, "sections": len(sections), "lines": sum(len(x["lines"]) for x in sections), "tables": len(tables), "prices": len(prices), "errors": ERRORS,
-                            "html_sizes": SIZES})
+                            "html_sizes": SIZES, "debug": DEBUG})
     print(f"OK: {ok} Seiten, {len(sections)} Abschnitte, {len(prices)} Preiszeilen, {len(notes)} Hinweise")
 
 if __name__ == "__main__":
