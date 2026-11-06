@@ -8,9 +8,9 @@
   "errors": [],
   "html_sizes": {
    "index.php": 28370,
-   "angelpark_caster.php": 19596,
+   "angelpark_caster.php": 19592,
    "preise_caster.php": 25010,
-   "teichordnung_caster.php": 26525
+   "teichordnung_caster.php": 26523
   },
   "debug": [
    {
@@ -94,16 +94,13 @@
     }
    }
   ],
-  "at": "2026-11-06T00:31:41+00:00"
+  "at": "2026-11-06T01:00:56+00:00"
  },
  "shops": {
   "ok": true,
-  "osm_elements": 237,
-  "shops": 184,
-  "errors": [
-   "https://overpass-api.de/api/interpreter: 502 Server Error: Bad Gateway for url: https://overpass-api.de/api/interpreter",
-   "https://overpass.private.coffee/api/interpreter: HTTPSConnectionPool(host='overpass.private.coffee', port=443): Read timed out. (read timeout=330)"
-  ],
-  "at": "2026-11-06T00:40:27+00:00"
+  "osm_elements": 243,
+  "shops": 186,
+  "errors": [],
+  "at": "2026-11-06T01:02:30+00:00"
  }
 }
