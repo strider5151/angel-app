@@ -1,10 +1,10 @@
 {
  "caster": {
   "pages_ok": 4,
-  "sections": 0,
-  "lines": 0,
-  "tables": 0,
-  "prices": 0,
+  "sections": 25,
+  "lines": 70,
+  "tables": 2,
+  "prices": 2,
   "errors": [],
   "html_sizes": {
    "index.php": 28370,
@@ -12,13 +12,95 @@
    "preise_caster.php": 25010,
    "teichordnung_caster.php": 26525
   },
-  "at": "2026-11-06T00:23:41+00:00"
+  "debug": [
+   {
+    "title": "Startseite",
+    "text_len": 3357,
+    "body_tag": "body",
+    "body_id": "top",
+    "sample": "(0 24 43) 2773 | [protected email address] Forellenzucht & Angelpark Caster Ihr Fachmann für frische Forellen Viel frisches Wasser aus dem Veybach und natürliche Umgebung sind das Rezept für unsere Forellenzucht. Auf gut 12.500 qm schaffen wir mit unseren 12 Fischzuchtbecken die besten Bedingungen für die Aufzucht unserer Forellen. Durch die natürliche Bewässerung sorgen wir für ausgeglichene Temperaturen und eine ausgeglichene Sauerstoffversorgung. Also ideale Bedingungen für unsere Fische, um in Ruhe und naturnah aufzuwachsen. Unsere Forellenzucht an der Feyermühle ist sich Ihrer Tradition b",
+    "html_head": " <!DOCTYPE html> <html lang=\"de\"> <head> <script> function MM_openBrWindow(theURL,winName,features) { //v2.0 window.open(theURL,winName,features); } </script> <meta name=\"viewport\" content=\"",
+    "tags": {
+     "p": 10,
+     "div": 98,
+     "table": 0,
+     "h1": 1,
+     "h2": 3,
+     "h3": 5,
+     "br": 30,
+     "span": 12,
+     "font": 0,
+     "td": 0
+    }
+   },
+   {
+    "title": "Angelpark",
+    "text_len": 1986,
+    "body_tag": "section",
+    "body_id": null,
+    "sample": "(0 24 43) 2773 | [protected email address] Fischverkauf Unser Angelpark Angelpark Preise/Öffnungszeiten Teichordnung Bildergalerie Kontakt Kontakt Impressum Datenschutz Der Angelpark Caster Forellenzucht & Angelpark Caster – Ihr Fachmann für frische Forellen Der Angelpark Caster ist das perfekte Ziel für Ihren Angelausflug. Unsere Anlage besteht aus 6 Teichen in unterschiedlichen Größen und ist sehr idyllisch gelegen. Der perfekte Ort um seiner Leidenschaft für das Angeln nachzugehen. Unsere Fischbecken werden naturnah durch das Wasser des Veybach gespeist und sorgen so, im Zusammenwirken mit ",
+    "html_head": " <!DOCTYPE html> <html lang=\"de\"> <head> <script> function MM_openBrWindow(theURL,winName,features) { //v2.0 window.open(theURL,winName,features); } </script> <meta name=\"viewport\" content=\"w",
+    "tags": {
+     "p": 7,
+     "div": 54,
+     "table": 0,
+     "h1": 1,
+     "h2": 2,
+     "h3": 5,
+     "br": 24,
+     "span": 11,
+     "font": 0,
+     "td": 0
+    }
+   },
+   {
+    "title": "Preise & Öffnungszeiten",
+    "text_len": 1941,
+    "body_tag": "section",
+    "body_id": null,
+    "sample": "(0 24 43) 2773 | [protected email address] Fischverkauf Unser Angelpark Angelpark Preise/Öffnungszeiten Teichordnung Bildergalerie Kontakt Kontakt Impressum Datenschutz Preise und Öffnungszeiten Sommeröffnungszeiten (01. März bis 30. September) Winteröffnungszeiten (1. Oktober bis 28. Februar) Preisübersicht für Besatz und Reservierung Karte Karte unserer Fischteiche Sommeröffnungszeiten (01. März bis 30. September) Tagesangler: Montag bis Sonntag: Einlass: 7:00 Uhr – 7:30 Uhr Angeln: bis 17:00 Uhr Fischverkauf / Schlachtraum: Montag bis Samstag: 7:00 Uhr – 11:00 Uhr 13:00 Uhr – 17:00 Uhr Sonn",
+    "html_head": " <!DOCTYPE html> <html lang=\"de\"> <head> <script> function MM_openBrWindow(theURL,winName,features) { //v2.0 window.open(theURL,winName,features); } </script> <meta name=\"viewport\" content=\"width",
+    "tags": {
+     "p": 3,
+     "div": 85,
+     "table": 2,
+     "h1": 5,
+     "h2": 0,
+     "h3": 1,
+     "br": 18,
+     "span": 7,
+     "font": 0,
+     "td": 30
+    }
+   },
+   {
+    "title": "Teichordnung",
+    "text_len": 4780,
+    "body_tag": "section",
+    "body_id": null,
+    "sample": "(0 24 43) 2773 | [protected email address] Fischverkauf Unser Angelpark Angelpark Preise/Öffnungszeiten Teichordnung Bildergalerie Kontakt Kontakt Impressum Datenschutz Unsere Teichordnung Forellenzucht & Angelpark Caster – Ihr Fachmann für frische Forellen Kinder Kinder bis einschließlich 10 Jahre haben freien Eintritt, wenn sie in Begleitung eines Erwachsenen (min. 18 Jahre alt) sind und die Begleitperson den eingesetzten Fisch bezahlt hat. Die Kinder dürfen unter Aufsicht der Begleitperson unter Beachtung des Bundesfischereirecht mit einer Rute angeln. Die Verantwortung für das Handeln des ",
+    "html_head": " <!DOCTYPE html> <html lang=\"de\"> <head> <script> function MM_openBrWindow(theURL,winName,features) { //v2.0 window.open(theURL,winName,features); } </script> <meta name=\"viewport\" content=\"w",
+    "tags": {
+     "p": 12,
+     "div": 82,
+     "table": 0,
+     "h1": 1,
+     "h2": 2,
+     "h3": 9,
+     "br": 29,
+     "span": 11,
+     "font": 0,
+     "td": 0
+    }
+   }
+  ],
+  "at": "2026-11-06T00:28:02+00:00"
  },
  "shops": {
   "ok": true,
   "osm_elements": 243,
   "shops": 186,
   "errors": [],
-  "at": "2026-11-06T00:25:08+00:00"
+  "at": "2026-11-06T00:29:13+00:00"
  }
 }

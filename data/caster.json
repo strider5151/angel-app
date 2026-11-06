@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T00:23:41+00:00",
+ "updated": "2026-11-06T00:28:02+00:00",
  "curated": {
   "name": "Forellenzucht & Angelpark Caster",
   "address": "Feyermühle, 53894 Mechernich",
@@ -76,25 +76,16 @@
   },
   "prices": [
    {
+    "teich": "VIP Teich",
+    "besatz": "Lachsforelle/Saibling",
+    "preis": "50€",
+    "locked": false
+   },
+   {
     "teich": "Großer Teich",
-    "besatz": "Täglicher Mischbesatz: Regenbogen-, Lachs-, Goldforelle, Saibling, Rotfeder, Zander, Aal, Karpfen, Stör",
-    "preis": "30 €"
-   },
-   {
-    "teich": "Teich 4",
-    "besatz": "Regenbogenforelle",
-    "preis": "25 €"
-   },
-   {
-    "teich": "VIP-Teich",
-    "besatz": "Lachsforelle & Saibling",
-    "preis": "50 €"
-   },
-   {
-    "teich": "Teiche 1, 2, 3",
-    "besatz": "gesperrt",
-    "preis": "–",
-    "locked": true
+    "besatz": "täglich Mischbesatz (Regenbogenforelle, Lachsforelle, Rotfeder, Saiblinge, Zander, Goldforelle, Aale, Karpfen (Graskarpfen zurücksetzen), Störe (ab 1m zurücksetzen))",
+    "preis": "30€",
+    "locked": false
    }
   ],
   "pricesNote": "Graskarpfen und Störe ab 1 m sind zurückzusetzen. VIP-Teich reservierbar bis 20 Personen für 350 €, Großer Teich bis 65 Personen nach Vereinbarung.",
@@ -206,11 +197,214 @@
   }
  },
  "scraped": {
-  "fetched_at": "2026-11-06T00:23:41+00:00",
+  "fetched_at": "2026-11-06T00:28:02+00:00",
   "pages_ok": 4,
-  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "changed_at": null,
-  "notes": [],
-  "sections": []
+  "hash": "8dbbd02f39cda7e6d6e725abbef246016c095396e9b09f16ee21172a3af0c1a7",
+  "changed_at": "2026-11-06T00:28:02+00:00",
+  "notes": [
+   "Bis einschließslich 12.01.2025 zu den regulären Öffnungszeiten. Vom 13.01.2025 bis 31.01.2025 geschlossen.",
+   "1 | gesperrt",
+   "2 | gesperrt",
+   "3 | gesperrt",
+   "1 | 15 | gesperrt",
+   "2 | 15 | gesperrt"
+  ],
+  "sections": [
+   {
+    "title": "Ihr Fachmann für frische Forellen",
+    "lines": [
+     "Viel frisches Wasser aus dem Veybach und natürliche Umgebung sind das Rezept für unsere Forellenzucht. Auf gut 12.500 qm schaffen wir mit unseren 12 Fischzuchtbecken die besten Bedingungen für die Aufzucht unserer Forellen.",
+     "Durch die natürliche Bewässerung sorgen wir für ausgeglichene Temperaturen und eine ausgeglichene Sauerstoffversorgung. Also ideale Bedingungen für unsere Fische, um in Ruhe und naturnah aufzuwachsen.",
+     "Unsere Forellenzucht an der Feyermühle ist sich Ihrer Tradition bewusst und trägt dafür Sorge, dass sie unbeschwert Ihre Forelle, gegrillt, gebraten, gebacken oder gekocht genießen können.",
+     "Wer sich die Gelegenheit nicht entgehen lassen möchte, seinen Fisch selbst zu fangen hat dafür an unseren 6 Angelteichen ausreichend Gelegenheit. Alle anderen Forellenfreunde werden mit Sicherheit in unserem Forellenverkauf fündig.",
+     "Haben wir Ihnen Appetit auf frische Forelle gemacht? Dann schauen Sie doch einfach mal vorbei. Oder Sie nehmen einfach Kontakt mit uns auf."
+    ]
+   },
+   {
+    "title": "Spendenaufruf",
+    "lines": [
+     "Liebe Petrijüngerinnen und Petrijünger, im Jahr 2021 wurde die Zuchtanlage durch die Flutkatastrophe massiv zerstört. Der Neustart war mit gemischten Gefühlen. In diesem Jahr wurde die Forellenzucht-Anlage durch vermutlich illegal entsorgte Gülle massivst geschädigt! Die Polizei ermittelt. Die Presse (u. a. Kölner Stadtanzeiger, WDR) berichtete. Betroffen sind die Zuchtbecken & Angelteiche. Der Hauserbach speist die Anlage mit Wasser. Eine Jahresproduktion i. H. v. 20 Tonnen Fisch war in Minuten dem Tod geweiht . Schadenssumme: 250.000 € – dagegen kann man sich nicht versichern. Ein ganz persönlicher, unerwarteter familiärer Verlust erschütterte Ende letzten Jahres die gesamte Familie noch. Dennoch kämpft die Familie Baranov weiter. Wer Valentin Baranov kennt, weiß: Aufgeben ist keine Option. Vor dieser Haltung habe ich höchsten Respekt. Aus diesem Grund versuche ich mit diesem Spendenaufruf zu helfen. Deshalb bitte ich euch um eure Mithilfe! Die Familie Baranov steht gerade vor dem unverschuldeten Ruin. Jeder Euro gibt Hoffnung und ist eine große Hilfe – als Zeichen der Verbundenheit in der absoluten Not unter Anglern. Ich baue auf unser Gemeinschaftsgefühl und die Empathie von dir!",
+     "20 Tonnen Fisch verloren – 250.000 € Schaden. Nicht versicherbar. Jede Spende hilft."
+    ]
+   },
+   {
+    "title": "Forellenzucht & Angelpark Caster",
+    "lines": [
+     "Anschrift Feyermühle 53894 Mechernich Kontakt (0 24 43) 2773 [protected email address]"
+    ]
+   },
+   {
+    "title": "Forellenzucht & Angelpark Caster – Ihr Fachmann für frische Forellen",
+    "lines": [
+     "Der Angelpark Caster ist das perfekte Ziel für Ihren Angelausflug. Unsere Anlage besteht aus 6 Teichen in unterschiedlichen Größen und ist sehr idyllisch gelegen. Der perfekte Ort um seiner Leidenschaft für das Angeln nachzugehen.",
+     "Unsere Fischbecken werden naturnah durch das Wasser des Veybach gespeist und sorgen so, im Zusammenwirken mit Auswahl des Laiches, der ständigen Pflege und der Haltung der Fische zu einem perfekten Besatz unserer Angelteiche.",
+     "Unsere Teiche sind bequem mit dem Auto zu erreichen, so dass Sie keine Mühe mit Ihrer Ausrüstung und dem Transport Ihres Fangs haben. Wir bitten allerdings darum rücksichtsvoll zu parken und darauf zu achten, dass die Rettungswege frei bleiben.",
+     "Damit das Angeln zum Familienerlebnis werden kann, haben wir beschloßen, das Kinder bis 10 Jahre keinen Eintritt zahlen, solange sie in Begleitung eines Erwachsenen mit Bundesfischereischein sind.",
+     "Unsere Teiche sind standardmäßig mit Forellen und Regenbogenforellen besetzt. Ein Besatz mit anderen Fischen, wie Goldforelle, Lachsforelle, Bachforelle oder Saibling ist aber möglich."
+    ]
+   },
+   {
+    "title": "Forellenzucht & Angelpark Caster",
+    "lines": [
+     "Anschrift Feyermühle 53894 Mechernich Kontakt (0 24 43) 2773 [protected email address]"
+    ]
+   },
+   {
+    "title": "Sommeröffnungszeiten",
+    "lines": [
+     "(01. März bis 30. September)"
+    ]
+   },
+   {
+    "title": "Tagesangler:",
+    "lines": [
+     "Einlass: 7:00 Uhr – 7:30 Uhr",
+     "Angeln: bis 17:00 Uhr"
+    ]
+   },
+   {
+    "title": "Fischverkauf / Schlachtraum:",
+    "lines": [
+     "Montag bis Samstag: 7:00 Uhr – 11:00 Uhr 13:00 Uhr – 17:00 Uhr",
+     "Sonntag: 7:00 Uhr – 11:00 Uhr 13:00 Uhr – 15:00 Uhr"
+    ]
+   },
+   {
+    "title": "Kiloteich:",
+    "lines": [
+     "Montag bis Samstag: 7:00 Uhr – 17:00 Uhr",
+     "Sonntag: 7:00 Uhr - 15:00 Uhr"
+    ]
+   },
+   {
+    "title": "Winteröffnungszeiten",
+    "lines": [
+     "(1. Oktober bis 28. Februar)"
+    ]
+   },
+   {
+    "title": "Tagesangler:",
+    "lines": [
+     "Einlass Montag bis Sonntag: 8:00 Uhr – 8:30 Uhr",
+     "Angeln bis: 17:00 Uhr"
+    ]
+   },
+   {
+    "title": "Fischverkauf / Schlachtraum:",
+    "lines": [
+     "Montag bis Samstag: 8:00 Uhr – 11:00 Uhr & 13:00 Uhr - 17:00 Uhr",
+     "Sonntag: 8:00 Uhr – 11:00 Uhr & 13:00 Uhr - 15:00 Uhr"
+    ]
+   },
+   {
+    "title": "Imbiss:",
+    "lines": [
+     "Montag bis Sonntag: 11:00 Uhr – 13:00 Uhr"
+    ]
+   },
+   {
+    "title": "Mittagspause:",
+    "lines": [
+     "Täglich: 11:00 Uhr – 13:00 Uhr"
+    ]
+   },
+   {
+    "title": "Januar",
+    "lines": [
+     "Bis einschließslich 12.01.2025 zu den regulären Öffnungszeiten. Vom 13.01.2025 bis 31.01.2025 geschlossen."
+    ]
+   },
+   {
+    "title": "Vom 1.Februar bis zum 28.Februar",
+    "lines": [
+     "Einlass: 8:00 Uhr – 8:30 Uhr",
+     "Angelzeit bis: 17:00 Uhr"
+    ]
+   },
+   {
+    "title": "Besatzkarte",
+    "lines": [
+     "1 | gesperrt",
+     "2 | gesperrt",
+     "3 | gesperrt",
+     "4 | Regenbogenforelle | 25€",
+     "VIP Teich | Lachsforelle/Saibling | 50€",
+     "Großer Teich | täglich Mischbesatz (Regenbogenforelle, Lachsforelle, Rotfeder, Saiblinge, Zander, Goldforelle, Aale, Karpfen (Graskarpfen zurücksetzen), Störe (ab 1m zurücksetzen)) | 30€"
+    ]
+   },
+   {
+    "title": "Reservierungen",
+    "lines": [
+     "1 | 15 | gesperrt",
+     "2 | 15 | gesperrt",
+     "3 | 15 | gesperrt",
+     "VIP Teich | 20 | 350€",
+     "Großer Teich | 65 | nach Vereinbarung"
+    ]
+   },
+   {
+    "title": "Kinder",
+    "lines": [
+     "Kinder bis einschließlich 10 Jahre haben freien Eintritt, wenn sie in Begleitung eines Erwachsenen (min. 18 Jahre alt) sind und die Begleitperson den eingesetzten Fisch bezahlt hat. Die Kinder dürfen unter Aufsicht der Begleitperson unter Beachtung des Bundesfischereirecht mit einer Rute angeln. Die Verantwortung für das Handeln des Kindes obliegt der Begleitperson."
+    ]
+   },
+   {
+    "title": "Wichtige Hinweise",
+    "lines": [
+     "Spoons, Spinner und Wobbler sind mit Einzelhaken erlaubt. Blinker, Anfüttern, Futterkörbchen und lebender Köderfisch sowie das Ausnehmen der Fische am Gewässer ist verboten.",
+     "Der Setzkescher ist verboten.",
+     "Der Fischereischein ist Voraussetzung für den Erwerb der Besatzkarte. Die Erlaubnis wird für zwei Handangeln erteilt. Es darf nur die Person fischen, die eine Besatzkarte gelöst hat. Es ist nicht gestattet, Angelgeräte auszulegen, ohne das der Angler zugegen ist.",
+     "Es darf nur am Bezahlten Teich Geangelt werden",
+     "Benutzen Sie für den Abfall bitte unbedingt die am Haus bereitgestellten Müllbehälter! Einige Angler benutzen die Teichanlage als Mülldeponie, das ist nicht gestattet. Auch eine leere Zigarettenpackung ist Müll.",
+     "Das Betreten von Uferböschungen und Hängen ist verboten."
+    ]
+   },
+   {
+    "title": "Teichordnung",
+    "lines": [
+     "Grundsätzlich darf unsere Anlage jeder betreten, der Ruhe und Erholung in der Natur sucht. Mit dem Betreten der Anlage gilt die Teichordnung als anerkannt. Jegliches Betreten und Befahren der Anlage geschieht auf eigene Gefahr. Den Anweisungen des Aufsichtspersonals ist Folge zu leisten.",
+     "Eltern haften für Ihre Kinder.",
+     "1. Das Tierschutzgesetz ist zwingend zu befolgen.",
+     "2. Das Angeln ist überwiegend nur mit gültigem Fischereischein gestattet.",
+     "3. In den gekennzeichneten Besatz und Ruhezonen ist das Angeln strengstens verboten.",
+     "4. Das Mitführen von Hakenlöser, Unterfangkescher und Betäubungsgerät ist Pflicht.",
+     "5. Lebendhalterung ist nicht gestattet. Die gefangenen und getöteten Fische dürfen nur am Schlachtplatz ausgenommen werden. Bei hohen Temperaturen hat der Gast durch geeignete Mittel dafür zu sorgen, dass ein Verderben des Fangs verhindert wird (z. B. Kühlbox).",
+     "6. Es dürfen je Angler maximal 2 Angeln mit je einem Ein Haken verwendet werden.",
+     "7. Ein Reißen der Fische ist nicht gestattet. Zur Landung der Fische ist grundsätzlich ein Unterfangkescher vorgeschrieben.",
+     "8. Fangfähige Fische sind unverzüglich zu betäuben und unmittelbar darauf zu töten. Erst im Anschluss darf der Angelhaken entfernt werden. Die gefangenen Fische sind Eigentum des Karteninhabers."
+    ]
+   },
+   {
+    "title": "Für die Ergiebigkeit des Fanges wird keine Garantie übernommen.",
+    "lines": [
+     "9. Beim Angeln ist Rücksicht auf den Nachbarn zu nehmen und das friedliche Miteinander nicht stören.",
+     "10. Der übermäßige Genuss von Alkohol ist verboten. Weiterhin weisen wir auf das gültige Jugendschutzgesetz hin.",
+     "11. Jegliche Art von Anfüttern ist verboten.",
+     "12. Wer sich von seinem Angelplatz entfernt, muss seine Ruten aus dem Wasser entnehmen!",
+     "13. Für Schäden die der Angler sich selbst, oder anderen Personen zufügt, und auch für Folgeschäden ist er selbst verantwortlich und haftbar.",
+     "14. Der Angelplatz ist sauber zu verlassen. Angelschnur, Haken, Madendosen, Kronkorken, Zigarettenkippen oder ähnliches gehören nicht in die Natur."
+    ]
+   },
+   {
+    "title": "Benutzt bitte bereitgestellte Abfallbehälter.",
+    "lines": [
+     "15. Jeder Angler (Besucher) muss ohne Anspruch auf Entschädigung die Anlage verlassen",
+     "16. Erlaubt sind alle Angelmethoden lt. Fischereigesetz. Einschränkungen werden bekannt gegeben.",
+     "17. Der Angler hat für waidgerechtes, ruhiges Verhalten am Gewässer zu sorgen. Jeder Angler ist verpflichtet, die Natur, die Landschaft und die anderen Lebewesen vor Beeinträchtigung und Störung zu schützen!"
+    ]
+   },
+   {
+    "title": "Besonderheiten",
+    "lines": [
+     "Es ist gestattet mit Naturködern, Teigmischungen, Gummiwürmern, Maden, Plättchen zu Angeln und am Vorfach Gummikunstköder nicht Länger als 5 cm. Das Angeln mit Kunstködern, Wobbler und Spinner ist nur mit einem Haken gestattet. Drillinge und Zwillingshaken dürfen aus Fischschutzgründen nicht verwendet werden."
+    ]
+   },
+   {
+    "title": "Forellenzucht & Angelpark Caster",
+    "lines": [
+     "Anschrift Feyermühle 53894 Mechernich Kontakt (0 24 43) 2773 [protected email address]"
+    ]
+   }
+  ]
  }
 }
