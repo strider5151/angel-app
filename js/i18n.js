@@ -140,6 +140,7 @@
   };
   // Einfache Wortersetzung für Texte aus Daten (Preise, Besatz) ins Russische
   const RU_WORDS = [
+    ["Graskarpfen zurücksetzen", "белого амура отпускать"], ["ab 1m zurücksetzen", "от 1 м отпускать"], ["ab 1 m zurücksetzen", "от 1 м отпускать"],
     ["Großer Teich", "Большой пруд"], ["VIP-Teich", "VIP-пруд"], ["VIP Teich", "VIP-пруд"], ["Teiche", "Пруды"], ["Teich", "Пруд"],
     ["Täglicher Mischbesatz", "Ежедневное смешанное зарыбление"], ["täglich Mischbesatz", "ежедневное смешанное зарыбление"], ["Mischbesatz", "смешанное зарыбление"],
     ["Regenbogenforellen", "радужная форель"], ["Regenbogenforelle", "радужная форель"], ["Regenbogen-", "радужная, "], ["Lachsforellen", "лососевая форель"], ["Lachsforelle", "лососевая форель"], ["Lachs-", "лососевая, "],

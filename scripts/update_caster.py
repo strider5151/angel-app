@@ -85,20 +85,33 @@ def page_sections(html, fallback_title):
     return sections, tables
 
 def parse_prices(tables):
-    """Sucht die Besatzkarte: Zeilen mit Teich | Besatz | Preis."""
+    """Sucht die Besatzkarte: Zeilen 'Teich | Besatz | Preis' (Teich auch nur als Nummer)."""
     out = []
     for rows in tables:
         for r in rows:
-            if len(r) < 2 or not re.search(r"teich", r[0], re.I):
+            if len(r) < 2:
+                continue
+            first = r[0].strip()
+            if re.fullmatch(r"\d+", first):
+                teich = "Teich " + first
+            elif re.search(r"teich", first, re.I):
+                teich = first
+            else:
                 continue
             preis = r[-1] if len(r) >= 3 else ""
-            locked = bool(re.search(r"gesperrt", " ".join(r), re.I))
+            locked = bool(re.search(r"gesperrt", " ".join(r[1:]), re.I))
             if not (re.search(r"\d+\s*€|€\s*\d+", preis) or locked):
                 continue
-            if re.fullmatch(r"\d+", r[1].strip()) or any(o["teich"] == r[0] for o in out):
+            if re.fullmatch(r"\d+", r[1].strip()) or any(o["teich"] == teich for o in out):
                 continue  # Reservierungstabelle (Personenzahl) bzw. Doppelte überspringen
-            out.append({"teich": r[0], "besatz": r[1], "preis": preis if not locked else "–", "locked": locked})
-    return out
+            out.append({"teich": teich, "besatz": "gesperrt" if locked else r[1], "preis": "–" if locked else preis.replace("€", " €").replace("  ", " ").strip(), "locked": locked})
+    # gesperrte Einzelteiche zusammenfassen
+    locked = [o for o in out if o["locked"] and o["teich"].startswith("Teich ")]
+    if len(locked) > 1:
+        nums = ", ".join(o["teich"].split(" ", 1)[1] for o in locked)
+        out = [o for o in out if o not in locked] + [{"teich": "Teiche " + nums, "besatz": "gesperrt", "preis": "–", "locked": True}]
+    order = lambda o: (o["locked"], 0 if "Groß" in o["teich"] else 1)
+    return sorted(out, key=order)
 
 def parse_closures(text, year):
     """Erkennt z. B. '13.01.–31.01.2027 geschlossen'."""
@@ -146,13 +159,25 @@ def main():
     changed_at = old_sc.get("changed_at")
     if old_sc.get("hash") and old_sc.get("hash") != h:
         changed_at = now()
-    notes = []
+    # doppelte Abschnitte (z. B. Adresse auf jeder Seite) entfernen
+    uniq, seen = [], set()
+    for sec in sections:
+        k = sec["title"] + "|" + "|".join(sec["lines"])
+        if k not in seen:
+            seen.add(k)
+            uniq.append(sec)
+    sections = uniq
+    notes, year = [], dt.date.today().year
     for s in sections:
-        if s["title"].startswith("Teichordnung"):
+        if s["title"].startswith("Teichordnung") or s["title"] in ("Besatzkarte", "Reservierungen"):
             continue
         for l in s["lines"]:
-            if NOTE.search(l) and len(l) < 300 and l not in notes:
-                notes.append(l)
+            years = [int(y) for y in re.findall(r"20\d\d", l)]
+            if years and max(years) < year:
+                continue  # veraltete Hinweise (z. B. Januar des Vorjahres)
+            if "|" in l or not NOTE.search(l) or len(l) > 300 or l in notes:
+                continue
+            notes.append(l)
     curated = dict(base)
     prices = parse_prices(tables)
     if len(prices) >= 2:
