@@ -8,9 +8,9 @@
   "errors": [],
   "html_sizes": {
    "index.php": 28370,
-   "angelpark_caster.php": 19592,
+   "angelpark_caster.php": 19594,
    "preise_caster.php": 25010,
-   "teichordnung_caster.php": 26523
+   "teichordnung_caster.php": 26525
   },
   "debug": [
    {
@@ -94,7 +94,7 @@
     }
    }
   ],
-  "at": "2026-11-06T01:00:56+00:00"
+  "at": "2026-11-06T05:08:57+00:00"
  },
  "shops": {
   "ok": true,
