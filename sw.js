@@ -1,5 +1,5 @@
 /* Service Worker: App-Dateien offline, Daten immer zuerst aus dem Netz */
-const VERSION = "bb-v2";
+const VERSION = "bb-v3";
 const SHELL = ["./", "index.html", "css/style.css", "js/app.js", "js/i18n.js", "js/astro.js", "js/oh.js", "manifest.webmanifest",
   "icons/icon.svg", "icons/perch.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL))); self.skipWaiting(); });

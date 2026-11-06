@@ -63,6 +63,13 @@ function routeUrl(name, address, lat, lon) {
   const dest = q && address ? q : (lat != null ? `${lat},${lon}` : q);
   return "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(dest);
 }
+// Nur echte Web-Adressen zulassen (Schutz vor manipulierten Links aus OpenStreetMap, z. B. "javascript:")
+function safeUrl(u) {
+  if (!u) return "";
+  let x = String(u).trim();
+  if (!/^[a-z]+:/i.test(x)) x = "https://" + x;
+  try { const p = new URL(x); return (p.protocol === "https:" || p.protocol === "http:") ? p.href : ""; } catch { return ""; }
+}
 const searchUrl = q => "https://www.google.com/search?q=" + encodeURIComponent(q);
 const btnA = (href, icon, label, primary = false, ext = true) => `<a class="btn${primary ? " primary" : ""}" href="${esc(href)}"${ext ? ' target="_blank" rel="noopener"' : ""}>${ico(icon)}${label}</a>`;
 
@@ -415,8 +422,10 @@ VIEWS.shops = () => {
     const addr = [s.street, [s.postcode, s.city].filter(Boolean).join(" ")].filter(Boolean).join(", ");
     const who = [s.name, s.city].filter(Boolean).join(" ");
     // Immer drei Knöpfe: fehlt Telefon oder Webseite, wird im Internet danach gesucht
-    const phoneBtn = s.phone ? btnA("tel:" + s.phone.replace(/[^+\d]/g, ""), "phone", t("call"), false, false) : btnA(searchUrl(who + " Telefon"), "phone", t("findNumber"));
-    const webBtn = s.website ? btnA(s.website, "web", t("website")) : btnA(searchUrl(who), "search", t("searchWeb"));
+    const tel = (s.phone || "").split(/[;,]/)[0].replace(/[^+\d]/g, "");
+    const phoneBtn = tel.length >= 5 ? btnA("tel:" + tel, "phone", t("call"), false, false) : btnA(searchUrl(who + " Telefon"), "phone", t("findNumber"));
+    const web = safeUrl(s.website);
+    const webBtn = web ? btnA(web, "web", t("website")) : btnA(searchUrl(who), "search", t("searchWeb"));
     return card(`<div style="display:flex;justify-content:space-between;gap:8px"><div class="grow" style="display:flex;flex-direction:column;gap:2px"><b>${esc(s.name)}</b><span class="small muted">${esc(addr || t("addrMap"))}</span></div><b class="small muted" style="white-space:nowrap">${num(s.km)} km</b></div>
       <div class="chips">${status}${s.rheinkarte ? chip(t("rheinCards")) : ""}${s.kind === "outdoor" ? chip(t("outdoor")) : ""}</div>
       ${s.opening_hours ? `<p class="small">${esc(OH.pretty(s.opening_hours, I18N.lang, t("oh_closedDay")))}</p>` : `<p class="small muted">${t("hoursMissing")}</p>`}
