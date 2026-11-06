@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T00:28:02+00:00",
+ "updated": "2026-11-06T00:31:41+00:00",
  "curated": {
   "name": "Forellenzucht & Angelpark Caster",
   "address": "Feyermühle, 53894 Mechernich",
@@ -76,16 +76,28 @@
   },
   "prices": [
    {
-    "teich": "VIP Teich",
-    "besatz": "Lachsforelle/Saibling",
-    "preis": "50€",
+    "teich": "Großer Teich",
+    "besatz": "täglich Mischbesatz (Regenbogenforelle, Lachsforelle, Rotfeder, Saiblinge, Zander, Goldforelle, Aale, Karpfen (Graskarpfen zurücksetzen), Störe (ab 1m zurücksetzen))",
+    "preis": "30 €",
     "locked": false
    },
    {
-    "teich": "Großer Teich",
-    "besatz": "täglich Mischbesatz (Regenbogenforelle, Lachsforelle, Rotfeder, Saiblinge, Zander, Goldforelle, Aale, Karpfen (Graskarpfen zurücksetzen), Störe (ab 1m zurücksetzen))",
-    "preis": "30€",
+    "teich": "Teich 4",
+    "besatz": "Regenbogenforelle",
+    "preis": "25 €",
     "locked": false
+   },
+   {
+    "teich": "VIP Teich",
+    "besatz": "Lachsforelle/Saibling",
+    "preis": "50 €",
+    "locked": false
+   },
+   {
+    "teich": "Teiche 1, 2, 3",
+    "besatz": "gesperrt",
+    "preis": "–",
+    "locked": true
    }
   ],
   "pricesNote": "Graskarpfen und Störe ab 1 m sind zurückzusetzen. VIP-Teich reservierbar bis 20 Personen für 350 €, Großer Teich bis 65 Personen nach Vereinbarung.",
@@ -197,18 +209,11 @@
   }
  },
  "scraped": {
-  "fetched_at": "2026-11-06T00:28:02+00:00",
+  "fetched_at": "2026-11-06T00:31:41+00:00",
   "pages_ok": 4,
   "hash": "8dbbd02f39cda7e6d6e725abbef246016c095396e9b09f16ee21172a3af0c1a7",
   "changed_at": "2026-11-06T00:28:02+00:00",
-  "notes": [
-   "Bis einschließslich 12.01.2025 zu den regulären Öffnungszeiten. Vom 13.01.2025 bis 31.01.2025 geschlossen.",
-   "1 | gesperrt",
-   "2 | gesperrt",
-   "3 | gesperrt",
-   "1 | 15 | gesperrt",
-   "2 | 15 | gesperrt"
-  ],
+  "notes": [],
   "sections": [
    {
     "title": "Ihr Fachmann für frische Forellen",
@@ -241,12 +246,6 @@
      "Unsere Teiche sind bequem mit dem Auto zu erreichen, so dass Sie keine Mühe mit Ihrer Ausrüstung und dem Transport Ihres Fangs haben. Wir bitten allerdings darum rücksichtsvoll zu parken und darauf zu achten, dass die Rettungswege frei bleiben.",
      "Damit das Angeln zum Familienerlebnis werden kann, haben wir beschloßen, das Kinder bis 10 Jahre keinen Eintritt zahlen, solange sie in Begleitung eines Erwachsenen mit Bundesfischereischein sind.",
      "Unsere Teiche sind standardmäßig mit Forellen und Regenbogenforellen besetzt. Ein Besatz mit anderen Fischen, wie Goldforelle, Lachsforelle, Bachforelle oder Saibling ist aber möglich."
-    ]
-   },
-   {
-    "title": "Forellenzucht & Angelpark Caster",
-    "lines": [
-     "Anschrift Feyermühle 53894 Mechernich Kontakt (0 24 43) 2773 [protected email address]"
     ]
    },
    {
@@ -397,12 +396,6 @@
     "title": "Besonderheiten",
     "lines": [
      "Es ist gestattet mit Naturködern, Teigmischungen, Gummiwürmern, Maden, Plättchen zu Angeln und am Vorfach Gummikunstköder nicht Länger als 5 cm. Das Angeln mit Kunstködern, Wobbler und Spinner ist nur mit einem Haken gestattet. Drillinge und Zwillingshaken dürfen aus Fischschutzgründen nicht verwendet werden."
-    ]
-   },
-   {
-    "title": "Forellenzucht & Angelpark Caster",
-    "lines": [
-     "Anschrift Feyermühle 53894 Mechernich Kontakt (0 24 43) 2773 [protected email address]"
     ]
    }
   ]

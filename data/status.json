@@ -1,10 +1,10 @@
 {
  "caster": {
   "pages_ok": 4,
-  "sections": 25,
-  "lines": 70,
+  "sections": 23,
+  "lines": 68,
   "tables": 2,
-  "prices": 2,
+  "prices": 4,
   "errors": [],
   "html_sizes": {
    "index.php": 28370,
@@ -94,13 +94,16 @@
     }
    }
   ],
-  "at": "2026-11-06T00:28:02+00:00"
+  "at": "2026-11-06T00:31:41+00:00"
  },
  "shops": {
   "ok": true,
-  "osm_elements": 243,
-  "shops": 186,
-  "errors": [],
-  "at": "2026-11-06T00:29:13+00:00"
+  "osm_elements": 237,
+  "shops": 184,
+  "errors": [
+   "https://overpass-api.de/api/interpreter: 502 Server Error: Bad Gateway for url: https://overpass-api.de/api/interpreter",
+   "https://overpass.private.coffee/api/interpreter: HTTPSConnectionPool(host='overpass.private.coffee', port=443): Read timed out. (read timeout=330)"
+  ],
+  "at": "2026-11-06T00:40:27+00:00"
  }
 }

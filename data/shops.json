@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T00:29:13+00:00",
+ "updated": "2026-11-06T00:40:27+00:00",
  "center": {
   "lat": 50.7374,
   "lon": 7.0982
@@ -115,21 +115,21 @@
    "kind": "outdoor"
   },
   {
-   "name": "Angelsport Happ",
+   "name": "Angel Happ",
    "lat": 50.5495032,
    "lon": 9.6794268,
-   "street": "",
-   "postcode": "",
-   "city": "",
-   "phone": "",
-   "website": "",
-   "opening_hours": "Tu-Fr 10:00-14:00,15:00-18:00; Sa 10:00-15:00",
+   "street": "Florengasse 15",
+   "postcode": "36037",
+   "city": "Fulda",
+   "phone": "+49 661 2911222",
+   "website": "https://modellbahnwelt-fulda.de/",
+   "opening_hours": "Tu-Fr 10:00-1:00,16:00-18:00; Sa 10:00-15:00",
    "kind": "outdoor"
   },
   {
    "name": "Heuer Angelsport",
-   "lat": 50.6230267,
-   "lon": 7.1218099,
+   "lat": 50.6228234,
+   "lon": 7.1219273,
    "street": "",
    "postcode": "",
    "city": "",
@@ -274,24 +274,12 @@
    "name": "Angelsport Fuhl",
    "lat": 51.7488774,
    "lon": 8.7188191,
-   "street": "Hatzfelder Straße 20-22",
-   "postcode": "33104",
-   "city": "Paderborn",
-   "phone": "+49 5254 9305546",
+   "street": "",
+   "postcode": "",
+   "city": "",
+   "phone": "",
    "website": "",
-   "opening_hours": "Mo,We,Th,Fr 09:00-12:00,13:00-17:00; Tu 09:00-17:00; Sa 09:00-14:00",
-   "kind": "fishing"
-  },
-  {
-   "name": "Hengelsport Deventer",
-   "lat": 52.2541625,
-   "lon": 6.2065349,
-   "street": "Zwaluwenburg 29",
-   "postcode": "7423DV",
-   "city": "Deventer",
-   "phone": "+31 6 20267125",
-   "website": "https://hengelsport.nl/winkel/hengelsport-deventer",
-   "opening_hours": "Tu-Th 10:00-17:00; Fr 10:00-18:00; Sa 10:00-15:15",
+   "opening_hours": "Mo-Fr 9:00-18:00; Sa 8:30-14:30",
    "kind": "fishing"
   },
   {
@@ -367,18 +355,6 @@
    "kind": "fishing"
   },
   {
-   "name": "Van Aarle Hengelsport",
-   "lat": 51.6007522,
-   "lon": 5.6094938,
-   "street": "Cruijgenstraat 24",
-   "postcode": "5469BT",
-   "city": "Erp",
-   "phone": "+31 413 216 118",
-   "website": "https://vanaarlehengelsport.nl/",
-   "opening_hours": "Mo,We,Th 09:00-12:30,13:30-18:00; Tu off; Fr 09:00-12:30,13:30-20:00; Sa 09:00-12:30,13:30-17:00",
-   "kind": "fishing"
-  },
-  {
    "name": "Hengelsport Weert",
    "lat": 51.251557,
    "lon": 5.7114116,
@@ -387,7 +363,7 @@
    "city": "Weert",
    "phone": "+31 495 785562",
    "website": "",
-   "opening_hours": "Tu-Sa 09:30-17:00",
+   "opening_hours": "Tu-Sa 9:30-17:00",
    "kind": "fishing"
   },
   {
@@ -448,6 +424,18 @@
    "phone": "",
    "website": "",
    "opening_hours": "",
+   "kind": "fishing"
+  },
+  {
+   "name": "Wessels Hengelsport",
+   "lat": 51.9673942,
+   "lon": 5.6672162,
+   "street": "Bergstraat 44",
+   "postcode": "6701AD",
+   "city": "Wageningen",
+   "phone": "+31 6 45191145",
+   "website": "https://www.wesselshengelsport.nl/",
+   "opening_hours": "Mo 13:30-18:00; Tu-Th 09:00-18:00; Fr 09:00-20:30; Sa 09:00-17:00",
    "kind": "fishing"
   },
   {
@@ -627,7 +615,7 @@
    "city": "Gütersloh",
    "phone": "",
    "website": "http://www.angelgott.com/",
-   "opening_hours": "Mo-Fr 09:00-13:00,14:30-18:30; Sa 09:00-13:00",
+   "opening_hours": "Mo-Fr 9:00-13:00, 14:30-18:30; Sa 9:00-13:00",
    "kind": "fishing"
   },
   {
@@ -848,8 +836,8 @@
   },
   {
    "name": "Angelspezi Bensheim",
-   "lat": 49.6772284,
-   "lon": 8.616251,
+   "lat": 49.6772191,
+   "lon": 8.6162435,
    "street": "Wormser Straße 14",
    "postcode": "64625",
    "city": "Bensheim",
@@ -1045,9 +1033,9 @@
    "street": "Bergisch Gladbacher Straße 1000",
    "postcode": "51069",
    "city": "Köln",
-   "phone": "+49 221 9661234",
+   "phone": "0221 9661234",
    "website": "https://angelsport-dellbrueck.de/",
-   "opening_hours": "Mo-Fr 09:00-18:30; Sa 09:00-15:00",
+   "opening_hours": "",
    "kind": "fishing"
   },
   {
@@ -1331,8 +1319,8 @@
    "lat": 49.3831776,
    "lon": 8.3768713,
    "street": "Sandgasse 25",
-   "postcode": "67105",
-   "city": "Schifferstadt",
+   "postcode": "",
+   "city": "",
    "phone": "",
    "website": "",
    "opening_hours": "Mo-We 08:30-12:30,14:00-18:30; Th,Fr 08:30-12:30,14:00-19:00; Sa 08:30-15:00",
@@ -1508,21 +1496,33 @@
    "kind": "fishing"
   },
   {
+   "name": "CCC Aventure",
+   "lat": 49.071551,
+   "lon": 6.0909618,
+   "street": "",
+   "postcode": "",
+   "city": "",
+   "phone": "",
+   "website": "",
+   "opening_hours": "",
+   "kind": "fishing"
+  },
+  {
    "name": "Fauna Hengelsport",
    "lat": 51.7086675,
    "lon": 4.8786814,
    "street": "Elftweg 4",
    "postcode": "4941VP",
    "city": "Raamsdonksveer",
-   "phone": "+31 162 513 308",
+   "phone": "+31 162 51 33 08",
    "website": "https://www.hengelsportfauna.nl/",
-   "opening_hours": "Mo-Th 09:00-18:00; Fr 09:00-21:00; Sa 09:00-17:00; Su 12:00-16:00",
+   "opening_hours": "Mo-Th 09:00-18:00; Fr 09:00-21:00; Sa 09:00:17:00",
    "kind": "fishing"
   },
   {
    "name": "Angelfachgeschäft Paul",
-   "lat": 50.1006556,
-   "lon": 8.5684979,
+   "lat": 50.1006453,
+   "lon": 8.5685608,
    "street": "",
    "postcode": "",
    "city": "",
@@ -1540,7 +1540,7 @@
    "city": "",
    "phone": "+49 69 85 800 535",
    "website": "https://prolure.de",
-   "opening_hours": "Mo,We,Fr 09:00-19:00; Tu,Th 09:00-19:30; Sa 09:00-15:00",
+   "opening_hours": "Mo,Mi,Fr 09:00-19:00; Tu,Th 09:00-19:30; Sa 09:00-15:00",
    "kind": "fishing"
   },
   {
@@ -1673,30 +1673,6 @@
    "phone": "",
    "website": "https://www.aquazoopeche.lu/",
    "opening_hours": "Mo 13:30-18:00; Tu-Fr 08:30-12:00,13:30-18:00; Sa 09:00-12:00,13:30-17:00",
-   "kind": "fishing"
-  },
-  {
-   "name": "Askari Sport GmbH",
-   "lat": 51.100604,
-   "lon": 6.9408083,
-   "street": "Bahnhofstraße 41",
-   "postcode": "40764",
-   "city": "Langenfeld (Rheinland)",
-   "phone": "+49 2173 2758472",
-   "website": "",
-   "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-16:00",
-   "kind": "fishing"
-  },
-  {
-   "name": "Successful Baits",
-   "lat": 51.4371678,
-   "lon": 6.3978168,
-   "street": "Obereyller Straße 1",
-   "postcode": "47647",
-   "city": "Kerken",
-   "phone": "+49 2833 57197-0",
-   "website": "https://www.successful-baits.de/",
-   "opening_hours": "Tu,Th 10:00-18:00; We,Fr-Mo off",
    "kind": "fishing"
   },
   {
@@ -1880,15 +1856,15 @@
    "kind": "fishing"
   },
   {
-   "name": "Fisherman's Partner Hainburg",
+   "name": "Angel Sprey",
    "lat": 50.0706119,
    "lon": 8.9613933,
    "street": "Fasaneriestraße 5",
    "postcode": "63512",
    "city": "Hainburg",
    "phone": "",
-   "website": "https://fishermans-partner.eu/angler-fachmaerkte/deutschland/hainburg/",
-   "opening_hours": "Mo-Fr 09:00-19:00; Sa 08:00-16:00",
+   "website": "",
+   "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-16:00",
    "kind": "fishing"
   },
   {
