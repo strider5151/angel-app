@@ -8,29 +8,47 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "shops.json"
 EXTRA = ROOT / "scripts" / "shops_extra.json"
 LAT, LON, R = 50.7374, 7.0982, 200000
-Q = f"""[out:json][timeout:180];
+BBOX = "48.93,4.25,52.55,9.95"  # Rechteck um Bonn (±200 km), danach genau nach Entfernung gefiltert
+Q = f"""[out:json][timeout:300][bbox:{BBOX}];
 (
-  nwr["shop"="fishing"](around:{R},{LAT},{LON});
-  nwr["shop"~"outdoor|sports"]["fishing"~"yes|only"](around:{R},{LAT},{LON});
-  nwr["shop"~"outdoor|sports|pet"]["name"~"[Aa]ngel"](around:{R},{LAT},{LON});
+  nwr["shop"="fishing"];
+  nwr["shop"~"^(outdoor|sports)$"]["fishing"~"yes|only"];
+  nwr["shop"~"^(outdoor|sports|pet)$"]["name"~"[Aa]ngel"];
 );
 out center tags;"""
-SERVERS = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter", "https://maps.mail.ru/osm/tools/overpass/api/interpreter"]
+import math
+def dist(lat, lon):
+    r = math.pi / 180
+    a = math.sin((lat - LAT) * r / 2) ** 2 + math.cos(LAT * r) * math.cos(lat * r) * math.sin((lon - LON) * r / 2) ** 2
+    return 2 * 6371 * math.asin(math.sqrt(a))
+ERRORS = []
+def write_status(info):
+    p = ROOT / "data" / "status.json"
+    try:
+        st = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    except Exception:
+        st = {}
+    info["at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    st["shops"] = info
+    p.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+SERVERS = ["https://overpass-api.de/api/interpreter", "https://overpass.private.coffee/api/interpreter", "https://overpass.kumi.systems/api/interpreter", "https://maps.mail.ru/osm/tools/overpass/api/interpreter"]
 
 def fetch():
     for s in SERVERS:
         try:
-            r = requests.post(s, data={"data": Q}, timeout=240, headers={"User-Agent": "Barsch-Buddy-App"})
+            r = requests.post(s, data={"data": Q}, timeout=330, headers={"User-Agent": "Barsch-Buddy-App (privat)"})
             r.raise_for_status()
             return r.json()["elements"]
         except Exception as e:
             print(f"WARN {s}: {e}", file=sys.stderr)
+            ERRORS.append(f"{s}: {str(e)[:200]}")
     return None
 
 def main():
     els = fetch()
     if els is None:
         print("Overpass nicht erreichbar – behalte alte Daten.", file=sys.stderr)
+        write_status({"ok": False, "errors": ERRORS})
         return
     extra = json.loads(EXTRA.read_text(encoding="utf-8")) if EXTRA.exists() else {}
     shops, seen = [], set()
@@ -41,7 +59,7 @@ def main():
             continue
         lat = e.get("lat") or e.get("center", {}).get("lat")
         lon = e.get("lon") or e.get("center", {}).get("lon")
-        if lat is None:
+        if lat is None or dist(lat, lon) > R / 1000:
             continue
         key = (name.lower(), round(lat, 3), round(lon, 3))
         if key in seen:
@@ -75,6 +93,7 @@ def main():
     data = {"updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "center": {"lat": LAT, "lon": LON}, "radius_km": R // 1000, "shops": shops}
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    write_status({"ok": True, "osm_elements": len(els), "shops": len(shops), "errors": ERRORS})
     print(f"OK: {len(shops)} Shops")
 
 if __name__ == "__main__":

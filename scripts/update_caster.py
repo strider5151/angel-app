@@ -11,8 +11,20 @@ PAGES = {"Startseite": "index.php", "Angelpark": "angelpark_caster.php", "Preise
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "caster.json"
 SKIP = re.compile(r"IBAN|BIC|Spendenkonto|PayPal|Kontoinhaber|Empfänger|Cookie|Datenschutz|Impressum", re.I)
-NOTE = re.compile(r"geschlossen|gesperrt|Achtung|Hinweis|Betriebsferien|Urlaub|Ruhetag|Hochwasser|Flut|Gülle|wieder geöffnet|Eisfrei|Eis\b", re.I)
+NOTE = re.compile(r"geschlossen|gesperrt|Achtung|Hinweis|Betriebsferien|Urlaub|Hochwasser|Flut|Gülle|wieder geöffnet|Eisfrei|Eis\b", re.I)
 UA = {"User-Agent": "Barsch-Buddy-App (privat, taegliche Abfrage)"}
+
+ERRORS, SIZES = [], {}
+
+def write_status(key, info):
+    p = ROOT / "data" / "status.json"
+    try:
+        st = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    except Exception:
+        st = {}
+    info["at"] = now()
+    st[key] = info
+    p.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
 
 def now():
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -53,6 +65,15 @@ def page_sections(html, fallback_title):
                 cur["lines"].append(txt)
     if cur["lines"]:
         sections.append(cur)
+    # Fallback für Seiten ohne saubere Überschriften/Absätze (z. B. Text mit <br> in <div>s)
+    if sum(len(s["lines"]) for s in sections) < 3:
+        lines = []
+        for raw in body.get_text("\n").split("\n"):
+            txt = clean(raw)
+            if len(txt) > 2 and not SKIP.search(txt) and txt not in lines:
+                lines.append(txt)
+        if lines:
+            sections = [{"title": fallback_title, "lines": lines[:80]}]
     return sections, tables
 
 def parse_prices(tables):
@@ -94,6 +115,7 @@ def main():
         try:
             r = requests.get(BASE + path, headers=UA, timeout=30)
             r.raise_for_status()
+            SIZES[path] = len(r.text)
             r.encoding = r.apparent_encoding or "utf-8"
             s, t = page_sections(r.text, title)
             for sec in s:
@@ -104,8 +126,10 @@ def main():
             ok += 1
         except Exception as e:
             print(f"WARN {path}: {e}", file=sys.stderr)
+            ERRORS.append(f"{path}: {e}")
     if ok == 0:
         print("Keine Seite erreichbar – behalte alte Daten.", file=sys.stderr)
+        write_status("caster", {"pages_ok": 0, "errors": ERRORS})
         if old:
             return
         sections = []
@@ -138,6 +162,8 @@ def main():
     }
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    write_status("caster", {"pages_ok": ok, "sections": len(sections), "lines": sum(len(x["lines"]) for x in sections), "tables": len(tables), "prices": len(prices), "errors": ERRORS,
+                            "html_sizes": SIZES})
     print(f"OK: {ok} Seiten, {len(sections)} Abschnitte, {len(prices)} Preiszeilen, {len(notes)} Hinweise")
 
 if __name__ == "__main__":

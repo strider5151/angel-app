@@ -1,7 +1,7 @@
 {
   "name": "Barsch-Buddy – Angeln Bonn",
   "short_name": "Barsch-Buddy",
-  "description": "Angel-Empfehlungen für Rhein, Angelpark Caster, Shops und Lexikon – Bonn und 200 km Umkreis.",
+  "description": "Angel-Empfehlungen für Rhein, Angelpark Caster, Angelläden und Lexikon – Bonn und 200 km Umkreis.",
   "lang": "de",
   "start_url": "./#heute",
   "scope": "./",

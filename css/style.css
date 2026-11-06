@@ -12,10 +12,10 @@ h1,h2,h3{font-family:"Fredoka","Nunito",system-ui,sans-serif;font-weight:600;mar
 a{color:var(--g-dark);font-weight:700}
 button{font:inherit;color:inherit}
 
-.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:calc(12px + env(safe-area-inset-top)) 14px 12px;background:var(--g-dark);color:#fff}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:6px;padding:calc(12px + env(safe-area-inset-top)) 14px 12px;background:var(--g-dark);color:#fff}
 .logo{width:46px;height:46px;padding:6px 3px;border-radius:14px;background:#fff;object-fit:contain;flex-shrink:0}
 .top-text{flex:1;min-width:0}
-.top h1{font-size:1.35rem;line-height:1.1}
+.top h1{font-size:1.35rem;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .top p{margin:2px 0 0;font-size:.8rem;color:#D5EBDD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .icon-btn{width:44px;height:44px;border:0;border-radius:12px;background:var(--g-mid);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
 .icon-btn svg,.tabs svg,.ico{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -121,3 +121,14 @@ svg.chart{display:block;width:100%;height:auto}
 .modal-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:12px;background:var(--g-soft);font-size:1.1rem;cursor:pointer}
 .toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px}
 .toggle input{width:24px;height:24px;accent-color:var(--g-dark)}
+
+.lang-list{display:flex;flex-direction:column;gap:8px}
+.lang-btn{display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 14px;border-radius:14px;border:2px solid var(--line);background:#fff;font-size:1rem;font-weight:700;cursor:pointer;text-align:left}
+.lang-btn span{flex:1}
+.lang-btn[aria-pressed="true"]{border-color:var(--g-dark);background:var(--g-light);color:var(--g-dark)}
+.flag{width:36px;height:24px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.2);flex-shrink:0}
+.ico.chk{width:24px;height:24px;stroke:var(--g-dark);stroke-width:3}
+label.btn{position:relative}
+.photo-drop{min-height:90px}
+.photo-drop #photoPh .ico{width:40px;height:40px;opacity:.5}
+@media (max-width:360px){.logo{width:40px;height:40px}.icon-btn{width:40px;height:40px}}

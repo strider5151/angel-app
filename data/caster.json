@@ -100,10 +100,12 @@
   "pricesNote": "Graskarpfen und Störe ab 1 m sind zurückzusetzen. VIP-Teich reservierbar bis 20 Personen für 350 €, Großer Teich bis 65 Personen nach Vereinbarung.",
   "notes": [
    {
-    "text": "Teiche 1, 2 und 3 sind derzeit gesperrt."
+    "text": "Teiche 1, 2 und 3 sind derzeit gesperrt.",
+    "text_ru": "Пруды 1, 2 и 3 сейчас закрыты."
    },
    {
-    "text": "Laut Betreiber wurde die Anlage 2026 durch eingeleitete Gülle geschädigt (großer Fischverlust) – vor dem Besuch kurz anrufen."
+    "text": "Laut Betreiber wurde die Anlage 2026 durch eingeleitete Gülle geschädigt (großer Fischverlust) – vor dem Besuch kurz anrufen.",
+    "text_ru": "По словам владельца, в 2026 году хозяйство пострадало от сброса навозной жижи (большая гибель рыбы) – перед поездкой лучше позвонить."
    }
   ],
   "rules": {
@@ -117,7 +119,7 @@
     "max. 2 Handangeln, je 1 Haken",
     "Naturköder, Teig, Maden",
     "Gummiköder ≤ 5 cm",
-    "Spoons/Spinner/Wobbler nur Einzelhaken"
+    "Löffelblinker/Spinner/Wobbler nur mit Einzelhaken"
    ],
    "forbidden": [
     "Blinker",
@@ -128,7 +130,80 @@
     "Ausnehmen am Wasser"
    ]
   },
-  "closures": []
+  "closures": [],
+  "hoursTable_ru": {
+   "winter": [
+    [
+     "Ловля на день",
+     "Вход 8:00–8:30, ловля до 17:00"
+    ],
+    [
+     "Продажа рыбы Пн–Сб",
+     "8–11 и 13–17 ч"
+    ],
+    [
+     "Продажа рыбы Вс",
+     "8–11 и 13–15 ч"
+    ],
+    [
+     "Закусочная",
+     "11–13 ч"
+    ],
+    [
+     "Выходной",
+     "среда"
+    ]
+   ],
+   "summer": [
+    [
+     "Ловля на день",
+     "Вход 7:00–7:30, ловля до 17:00"
+    ],
+    [
+     "Продажа рыбы Пн–Сб",
+     "7–11 и 13–17 ч"
+    ],
+    [
+     "Продажа рыбы Вс",
+     "7–11 и 13–15 ч"
+    ],
+    [
+     "Пруд «на кило»",
+     "Пн–Сб 7–17, Вс 7–15 ч"
+    ],
+    [
+     "Выходной",
+     "среда"
+    ]
+   ],
+   "extra": [
+    "Февраль: открыто только в субботу и воскресенье.",
+    "Январь: возможен перерыв – точные дни появляются на сайте незадолго до этого."
+   ]
+  },
+  "pricesNote_ru": "Белого амура и осетров от 1 м нужно отпускать. VIP-пруд можно забронировать для группы до 20 человек за 350 €, большой пруд – до 65 человек по договорённости.",
+  "rules_ru": {
+   "must": [
+    "Экстрактор (освобождатель крючка)",
+    "Подсачек",
+    "Колотушка (для оглушения)",
+    "Сумка-холодильник в жару"
+   ],
+   "allowed": [
+    "макс. 2 удочки, по 1 крючку",
+    "натуральные приманки, тесто, опарыш",
+    "резина ≤ 5 см",
+    "колебалки/вертушки/воблеры только с одинарным крючком"
+   ],
+   "forbidden": [
+    "Блёсны",
+    "Прикормка и кормушки",
+    "Тройники и двойники",
+    "Садок",
+    "Живец",
+    "Потрошение у воды"
+   ]
+  }
  },
  "scraped": {
   "fetched_at": "2026-11-05T23:55:30+00:00",

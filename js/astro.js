@@ -60,24 +60,24 @@
     return { sunrise: r.rise, sunset: r.set, dawn: dawn.rise, dusk: dawn.set, goldenMorning: golden.rise, goldenEvening: golden.set, noon: r.upper };
   }
   function moonTimes(day, lat, lng) { return scanDay(moonAlt, day, lat, lng, 0.133); }
-  function phaseName(p) {
-    if (p < 0.03 || p > 0.97) return "Neumond";
-    if (p < 0.22) return "Zunehmende Sichel";
-    if (p < 0.28) return "Erstes Viertel";
-    if (p < 0.47) return "Zunehmender Mond";
-    if (p < 0.53) return "Vollmond";
-    if (p < 0.72) return "Abnehmender Mond";
-    if (p < 0.78) return "Letztes Viertel";
-    return "Abnehmende Sichel";
+  function phaseName(p) { // liefert Schlüssel, Übersetzung in i18n.js (ph_…)
+    if (p < 0.03 || p > 0.97) return "new";
+    if (p < 0.22) return "waxc";
+    if (p < 0.28) return "fq";
+    if (p < 0.47) return "waxg";
+    if (p < 0.53) return "full";
+    if (p < 0.72) return "wang";
+    if (p < 0.78) return "lq";
+    return "wanc";
   }
   // Solunar-Beißzeiten: Haupt = Mond oben/unten (±1 h), Neben = Mondauf/-untergang (±30 min)
   function solunar(day, lat, lng) {
     const m = moonTimes(day, lat, lng), out = [];
     const add = (t, half, kind, label) => { if (t) out.push({ start: new Date(t - half), end: new Date(+t + half), kind, label }); };
-    add(m.upper, 36e5, "major", "Mond im Zenit");
-    add(m.lower, 36e5, "major", "Mond im Nadir");
-    add(m.rise, 18e5, "minor", "Mondaufgang");
-    add(m.set, 18e5, "minor", "Monduntergang");
+    add(m.upper, 36e5, "major", "moonUpper");
+    add(m.lower, 36e5, "major", "moonLower");
+    add(m.rise, 18e5, "minor", "moonrise");
+    add(m.set, 18e5, "minor", "moonset");
     return out.sort((a, b) => a.start - b.start);
   }
   g.Astro = { sunTimes, moonTimes, moonIllumination, phaseName, solunar };
